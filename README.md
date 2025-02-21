@@ -4,7 +4,9 @@
 ![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey)
 
-A utility tool designed to modify device identification parameters for Cursor IDE, helping to manage and refresh device identifiers.
+A utility tool designed to modify device identification parameters for Cursor IDE, helping to manage and refresh device identifiers to bypass Cursor's free trial limit.
+
+![trial](https://github.com/user-attachments/assets/f8ba5322-2933-4cc4-89e2-5c7c6662b912)
 
 ![cursor-pwn](https://github.com/user-attachments/assets/f8f61f24-1438-4029-959a-d16d16121a8d)
 
