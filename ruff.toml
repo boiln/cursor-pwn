@@ -1,0 +1,67 @@
+# Line length configuration
+line-length = 88
+
+# Keep only essential rules for basic code quality
+select = [
+    "E",    # pycodestyle errors (basic style)
+    "F",    # pyflakes (basic errors)
+    "B",    # flake8-bugbear (bug detection)
+    "I",    # isort (import sorting)
+    "RUF",  # Ruff-specific rules
+    "S",    # flake8-bandit (security)
+]
+
+# Ignore rules that are too strict or unnecessary for this script
+ignore = [
+    "E501",    # line too long (handled by formatter)
+    "E301",    # expected 1 blank line
+    "E302",    # expected 2 blank lines
+    "E303",    # too many blank lines
+    "E305",    # expected 2 blank lines after class or function definition
+    "E402",    # module level import not at top of file
+    "E731",    # do not assign a lambda expression
+    "B008",    # do not perform function calls in argument defaults
+    "B006",    # do not use mutable data structures for argument defaults
+    "S101",    # use of assert detected
+    "S603",    # subprocess call - we trust our commands
+    "S607",    # start process with partial path
+    "RUF001",  # string contains ambiguous unicode character
+    "RUF002",  # docstring contains ambiguous unicode character
+    "RUF003",  # comment contains ambiguous unicode character
+]
+
+# Exclude common directories
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[isort]
+combine-as-imports = true
+split-on-trailing-comma = true
+required-imports = ["from __future__ import annotations"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+
+[lint]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+fixable = ["ALL"]
+unfixable = []
+
+[lint.per-file-ignores]
+"tests/*" = ["S101", "PLR2004", "D", "S"]
+"__init__.py" = ["F401", "D"]
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.pydocstyle]
+convention = "google"
