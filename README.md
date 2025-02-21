@@ -6,14 +6,7 @@
 
 A utility tool designed to modify device identification parameters for Cursor IDE, helping to manage and refresh device identifiers.
 
-```
-    ██████╗██╗   ██╗██████╗ ███████╗ ██████╗ ██████╗
-   ██╔════╝██║   ██║██╔══██╗██╔════╝██╔═══██╗██╔══██╗
-   ██║     ██║   ██║██████╔╝███████╗██║   ██║██████╔╝
-   ██║     ██║   ██║██╔══██╗╚════██║██║   ██║██╔══██╗
-   ╚██████╗╚██████╔╝██║  ██║███████║╚██████╔╝██║  ██║
-    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
-```
+![cursor-pwn](https://github.com/user-attachments/assets/f8f61f24-1438-4029-959a-d16d16121a8d)
 
 ## Features
 
