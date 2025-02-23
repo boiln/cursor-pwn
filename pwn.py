@@ -47,26 +47,6 @@ def print_banner():
 def get_cursor_version():
     """Get the installed Cursor version."""
     try:
-        # Main detection path
-        package_path = os.path.join(
-            os.environ["LOCALAPPDATA"],
-            "Programs",
-            "cursor",
-            "resources",
-            "app",
-            "package.json",
-        )
-
-        if os.path.exists(package_path):
-            with open(package_path, encoding="utf-8") as f:
-                package_json = json.load(f)
-                if package_json.get("version"):
-                    print(
-                        f"{GREEN}[INFO]{NC} Current Cursor version: v{package_json['version']}",
-                    )
-                    return package_json["version"]
-
-        # Alternative path
         alt_path = os.path.join(
             os.environ["LOCALAPPDATA"],
             "cursor",
@@ -298,17 +278,6 @@ def update_storage_file():
 
     try:
         print_banner()
-
-        cursor_version = get_cursor_version()
-        if cursor_version:
-            major_version = int(cursor_version.split(".")[0])
-            minor_version = int(cursor_version.split(".")[1])
-            if major_version == 0 and minor_version >= 46:
-                print(
-                    f"{RED}[ERROR]{NC} Current version ({cursor_version}) is not supported",
-                )
-                print(f"{YELLOW}[SUGGESTION]{NC} Please use v0.44.11 or lower")
-                return False
 
         # First close all Cursor processes
         if not close_cursor_processes():
